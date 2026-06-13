@@ -1,0 +1,21 @@
+# Build results
+bin/
+obj/
+
+# Rider / JetBrains
+.idea/
+
+# Visual Studio
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.rsuser
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

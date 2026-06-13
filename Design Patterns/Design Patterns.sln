@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Patterns", "Design Patterns\Design Patterns.csproj", "{39991AE8-F2DB-40A1-912E-0A311CEF287D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39991AE8-F2DB-40A1-912E-0A311CEF287D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39991AE8-F2DB-40A1-912E-0A311CEF287D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39991AE8-F2DB-40A1-912E-0A311CEF287D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39991AE8-F2DB-40A1-912E-0A311CEF287D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
