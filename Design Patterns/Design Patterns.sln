@@ -4,6 +4,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design Patterns", "Design P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesingPatterns", "DesingPatterns\DesingPatterns.csproj", "{FCC9CFAD-7D2D-4142-BF40-5CEECC55C599}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesingPattersASP", "DesingPattersASP\DesingPattersASP.csproj", "{2230C9F5-C201-43A2-AC6A-70C3C0B908E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "Tools\Tools.csproj", "{E97ABF21-3CEE-4536-BAD1-AE25E96DFB31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{FCC9CFAD-7D2D-4142-BF40-5CEECC55C599}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCC9CFAD-7D2D-4142-BF40-5CEECC55C599}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCC9CFAD-7D2D-4142-BF40-5CEECC55C599}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2230C9F5-C201-43A2-AC6A-70C3C0B908E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2230C9F5-C201-43A2-AC6A-70C3C0B908E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2230C9F5-C201-43A2-AC6A-70C3C0B908E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2230C9F5-C201-43A2-AC6A-70C3C0B908E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97ABF21-3CEE-4536-BAD1-AE25E96DFB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97ABF21-3CEE-4536-BAD1-AE25E96DFB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97ABF21-3CEE-4536-BAD1-AE25E96DFB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97ABF21-3CEE-4536-BAD1-AE25E96DFB31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
