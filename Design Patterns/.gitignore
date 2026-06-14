@@ -1,0 +1,20 @@
+# Build folders
+bin/
+obj/
+
+# IDEs
+.idea/
+.vs/
+
+# Logs
+*.log
+log*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# User-specific files
+*.user
+*.suo
+*.rsuser
