@@ -1,4 +1,5 @@
 ﻿using System;
+using DesingPatterns.FactoryPattern;
 using DesingPatterns.Singleton;
 
 namespace DesingPatterns
@@ -7,14 +8,15 @@ namespace DesingPatterns
     {
         static void Main(string[] args)
         {
-            //var singleton = Singleton.Singleton.Instance; // accedemos a la instancia del singleton, no podemos crear un nuevo objeto de singleton porque el constructor es privado, solo podemos acceder a la instancia que ya se creo dentro de la clase singleton
-            //Console.WriteLine(singleton);   //  no podemos crear otro mas  pero podemos acceder al unico objeto.
+             SaleFactory storeSaleFactory = new StoreSaleFactory(10);
+             SaleFactory internetSaleFactory = new InternetSaleFactory(5); 
+             //hacemos uso de las fabricas 
              
-            var log = Singleton.Log.Instance; // accedemos a la instancia del log, no podemos crear un nuevo objeto de log porque el constructor es privado, solo podemos acceder a la instancia que ya se creo dentro de la clase log
-            Log.Save("a");
-             Log.Save("b");
-             Log.Save("c");
-
+             ISale sale1  =  storeSaleFactory.GetSale();
+             sale1.Sell(100); // La venta en tienda tiene un total de : 110
+             
+             ISale sale2  =  internetSaleFactory.GetSale();
+             sale2.Sell(100); // La venta en INTERNET tiene un total de 95  
         }
     }
 };
