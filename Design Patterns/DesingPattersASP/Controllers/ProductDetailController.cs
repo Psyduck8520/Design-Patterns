@@ -21,7 +21,6 @@ public class ProductDetailController : Controller
                                                               // solo cambiando la fabrica que utilizamos.
                                                               
         ViewBag.totalExtrajero = total + foreignEarn.Earn(total);
-        
         return View();
     }
 }
