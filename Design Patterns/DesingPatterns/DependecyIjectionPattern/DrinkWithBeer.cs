@@ -6,7 +6,6 @@ public class DrinkWithBeer
     // cambie  por lo cual es mejor mandarlo como parametro en su creacion 
     // Lo correcto seria lo siguiente
     private  Beer _beer; 
-     
     private decimal _water;
     private decimal _sugar; 
     

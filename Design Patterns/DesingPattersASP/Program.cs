@@ -1,10 +1,37 @@
 using DesingPattersASP.Configurations;
+using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<MyConfig>(builder.Configuration.GetSection("MyConfig"));
+builder.Services.AddTransient<LocalEarnfactory>(serviceProvider =>
+{
+    var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+
+    var percentage = configuration
+        .GetSection("MyConfig")
+        .GetValue<decimal>("LocalPercentage");
+
+    return new LocalEarnfactory(percentage);
+});
+builder.Services.AddTransient<ForeignEarnfactory>(serviceProvider =>
+{
+    var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+
+    var percentage = configuration
+        .GetSection("MyConfig")
+        .GetValue<decimal>("ForeignPercentage");
+    var extra = configuration
+        .GetSection("MyConfig")
+        .GetValue<decimal>("extra");
+    
+    return new ForeignEarnfactory(percentage,  extra);
+});
+
+
+
 
 var app = builder.Build();
 
