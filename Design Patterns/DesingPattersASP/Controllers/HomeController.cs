@@ -6,20 +6,25 @@ using Microsoft.Extensions.Options;
 using Tools;
 
 namespace DesingPattersASP.Controllers;
+
+using DesignPatterns.Repository;
+using DesignPatters.Models.Data;
 using Tools;
 public class HomeController : Controller
 {
     private readonly IOptions<MyConfig> _config;
-    public HomeController( IOptions<MyConfig> config)
+    private readonly IRepostory<Beer> repostory;
+    public HomeController( IOptions<MyConfig> config, IRepostory<Beer> repostory)
     {
         _config = config;
-
+        this.repostory = repostory;
     }
     public IActionResult Index()
     {
         
         Log.GetInstance(_config.Value.PathLog).Save("Entro a index");
-        return View();
+        IEnumerable<Beer> lst = repostory.Get();
+        return View("Index",lst);
     }
 
     public IActionResult Privacy()

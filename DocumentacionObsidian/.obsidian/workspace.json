@@ -4,31 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "69320a85c5427a4d",
+        "id": "be5f957bfdffd434",
         "type": "tabs",
         "children": [
           {
-            "id": "88400c2f77169062",
+            "id": "d00671ffafb82bb9",
             "type": "leaf",
             "state": {
-              "type": "diagram-edit",
+              "type": "diagram",
               "state": {
                 "file": "Repository.svg"
               },
               "icon": "lucide-file",
-              "title": "Repository.svg"
-            }
-          },
-          {
-            "id": "27f7dc2f93a2323b",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Registro de cambios 1.12.7"
+              "title": "Repository"
             }
           }
         ]
@@ -88,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "036ca9caeab8bf4b",
@@ -190,15 +179,17 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "drawio:Launch draw.io editor": false
     }
   },
-  "active": "88400c2f77169062",
+  "active": "d00671ffafb82bb9",
   "lastOpenFiles": [
-    "Patrones de diseño.md",
-    "factoryPattern.svg",
-    "Dependecy Injection.svg",
+    "Singleton.svg",
     "Repository.svg",
-    "Singleton.svg"
+    "Patrones de diseño.md",
+    "Untitled Diagram.svg",
+    "factoryPattern.svg",
+    "Dependecy Injection.svg"
   ]
 }

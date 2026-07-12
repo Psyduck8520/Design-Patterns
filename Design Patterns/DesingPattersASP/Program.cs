@@ -1,4 +1,7 @@
+using DesignPatterns.Repository;
+using DesignPatters.Models.Data;
 using DesingPattersASP.Configurations;
+using Microsoft.EntityFrameworkCore;
 using Tools.Earn;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +32,11 @@ builder.Services.AddTransient<ForeignEarnfactory>(serviceProvider =>
     
     return new ForeignEarnfactory(percentage,  extra);
 });
-
+builder.Services.AddDbContext<DesignPatternsContext>(  options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
+});
+builder.Services.AddScoped(typeof(IRepostory<>), typeof(Repository<>));
 
 
 

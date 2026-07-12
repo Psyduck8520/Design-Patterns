@@ -2,6 +2,7 @@
 using DesingPatterns.Models;
 using DesingPatterns.RepositoryPattern;
 using DesingPatterns.Singleton;
+using DesingPatterns.UnitOfWorkPattern;
 using System;
 
 namespace DesingPatterns
@@ -13,31 +14,17 @@ namespace DesingPatterns
             using (var contex = new DesignPatternsContext())
             {
               
-                var beerRepository = new Repository<Beer>(contex);
-                var beer =   new Beer()
-                {
-                    Name =  "Fuller",
-                    Style = "Strong Ale"
-                } ;
-                beerRepository.Add(beer); // Add the beer to the repository
-                beerRepository.Save();
+               var unitOfWork = new UnitOfWork(contex);
+               var beers = unitOfWork.Beers;
+               var beer = new Beer { Name = "Fuller", Style = "Porter" };
+                beers.Add(beer);
+                
+               var brands = unitOfWork.Brand;
+               var brand = new Brand { Name = "Fuller's Brewery" };
+                brands.Add(brand);
+                unitOfWork.Save(); // aki mandamos todo a guardar de una sola
+                 // de esta manera se mejora el rendimiento de nuestro sistema.
 
-                foreach (var b in beerRepository.Get())
-                {
-                    Console.WriteLine($"Beer: {b.Name}, Style: {b.Style}");
-                }
-                // Vamos hacer para agregar brand
-                var brandRepository = new Repository<Brand>(contex);  
-                var brand = new Brand()
-                {
-                    Name = "Fuller's Brewery"
-                };
-                brandRepository.Add(brand); // Add the brand to the repository
-                brandRepository.Save();
-                foreach (var b in brandRepository.Get())
-                {
-                    Console.WriteLine($"{b.Name}");
-                }
             }  
         }
         
