@@ -11,12 +11,12 @@
             "id": "d00671ffafb82bb9",
             "type": "leaf",
             "state": {
-              "type": "diagram",
+              "type": "diagram-edit",
               "state": {
-                "file": "Repository.svg"
+                "file": "UnitOfWork.svg"
               },
               "icon": "lucide-file",
-              "title": "Repository"
+              "title": "UnitOfWork.svg"
             }
           }
         ]
@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "036ca9caeab8bf4b",
@@ -185,10 +184,11 @@
   },
   "active": "d00671ffafb82bb9",
   "lastOpenFiles": [
+    "Untitled Diagram 1.svg",
+    "UnitOfWork.svg",
     "Singleton.svg",
     "Repository.svg",
     "Patrones de diseño.md",
-    "Untitled Diagram.svg",
     "factoryPattern.svg",
     "Dependecy Injection.svg"
   ]
