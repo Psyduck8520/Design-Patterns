@@ -27,6 +27,8 @@ public partial class DesignPatternsContext : DbContext
     {
         modelBuilder.Entity<Beer>(entity =>
         {
+            entity.HasKey(e => e.BeerId).HasName("PK__Beer__293C94BFF34D73E8");
+
             entity.ToTable("Beer");
 
             entity.Property(e => e.Name)
@@ -35,12 +37,18 @@ public partial class DesignPatternsContext : DbContext
             entity.Property(e => e.Style)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Brand).WithMany(p => p.Beers)
+                .HasForeignKey(d => d.BrandId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Beer_Brand");
         });
 
         modelBuilder.Entity<Brand>(entity =>
         {
             entity.ToTable("Brand");
 
+            entity.Property(e => e.BrandId).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);

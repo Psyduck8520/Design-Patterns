@@ -37,7 +37,7 @@ builder.Services.AddDbContext<DesignPatternsContext>(  options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
 });
 builder.Services.AddScoped(typeof(IRepostory<>), typeof(Repository<>));
-
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>(); // Relizamos la inyección de dependencias para el patrón Unit of Work.
 
 
 var app = builder.Build();
