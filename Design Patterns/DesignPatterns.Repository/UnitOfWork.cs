@@ -21,7 +21,7 @@ namespace DesignPatterns.Repository
             }
         }
 
-        public IRepostory<Brand> Brand
+        public IRepostory<Brand> Brands
         {
             get
             {

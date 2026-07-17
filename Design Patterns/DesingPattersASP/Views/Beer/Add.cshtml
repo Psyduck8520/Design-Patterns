@@ -1,0 +1,37 @@
+﻿@model DesingPattersASP.Models.ViewModels.FormBeerViewModel
+
+@{
+    ViewData["Title"] = "Nueva Cerveza";
+}
+
+<h2>Nueva Cerveza</h2>
+
+<form asp-controller="Beer" asp-action="Add" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Style" class="form-label"></label>
+        <input asp-for="Style" class="form-control" />
+        <span asp-validation-for="Style" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+         <label asp-for="BrandId" class="form-label"></label>
+         <select class="form-select" asp-for="BrandId" asp-items="@ViewBag.Brands">
+            <option value="">Selecciona una marca</option>
+         </select>
+        <span asp-validation-for="BrandId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="OtherBrand" class="form-label"></label>
+        <input asp-for="OtherBrand" class="form-control" />
+        <span asp-validation-for="OtherBrand" class="text-danger"></span>   
+    </div>
+
+    <button type="submit" class="btn btn-primary">Agregar Cerveza</button>
+</form>

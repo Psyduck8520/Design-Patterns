@@ -9,7 +9,7 @@ namespace DesignPatterns.Repository
     {
         public IRepostory<Beer> Beers { get; }
 
-        public IRepostory<Brand> Brand { get; }
+        public IRepostory<Brand> Brands { get; }
 
         public void Save();
     }
