@@ -13,10 +13,10 @@
             "state": {
               "type": "diagram-edit",
               "state": {
-                "file": "Strategy.svg"
+                "file": "Builder.svg"
               },
               "icon": "lucide-file",
-              "title": "Strategy.svg"
+              "title": "Builder.svg"
             }
           }
         ]
@@ -182,11 +182,12 @@
       "drawio:Launch draw.io editor": false
     }
   },
-  "active": "d00671ffafb82bb9",
+  "active": "3e2a379ec6f6cd0f",
   "lastOpenFiles": [
+    "Sin título.md",
+    "Builder.svg",
     "UnitOfWork.svg",
     "Strategy.svg",
-    "Sin título.md",
     "Untitled Diagram 1.svg",
     "Singleton.svg",
     "Repository.svg",
