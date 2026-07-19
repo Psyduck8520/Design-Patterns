@@ -4,29 +4,27 @@ using DesingPatterns.RepositoryPattern;
 using DesingPatterns.Singleton;
 using DesingPatterns.UnitOfWorkPattern;
 using System;
-
+using  DesingPatterns.StrategyPatterns;
 namespace DesingPatterns
 {
     class Program
     {
         static void Main(string[] args)
         {
-            using (var contex = new DesignPatternsContext())
-            {
-              
-               var unitOfWork = new UnitOfWork(contex);
-               var beers = unitOfWork.Beers;
-               var beer = new Beer { Name = "Fuller", Style = "Porter" };
-                beers.Add(beer);
-                
-               var brands = unitOfWork.Brand;
-               var brand = new Brand { Name = "Fuller's Brewery" };
-                brands.Add(brand);
-                unitOfWork.Save(); // aki mandamos todo a guardar de una sola
-                 // de esta manera se mejora el rendimiento de nuestro sistema.
 
-            }  
+            var context  = new Context(new CarStrategy()); // aki estamos mandando la estrategia de carro 
+            
+            context.Run(); // aki estamos ejecutando la estrategia de carro
+            context.Strategy  = new MotoStrategy();
+            context.Run(); // aki estamos ejecutando la estrategia de moto
+
+            //Principio de responsabilidad unica
+            //Abierto cerrado, una clase abierta a extension pero cerrada a modificacion
+            // cumple los principios solidos de diseño de software, que son un conjunto
+            // de principios que ayudan a los desarrolladores a crear software más mantenible y escalable.
+
+            context.Strategy = new BicycleStrategy();
+            context.Run(); // aki estamos ejecutando la estrategia de bicicleta.
         }
-        
     }
 }

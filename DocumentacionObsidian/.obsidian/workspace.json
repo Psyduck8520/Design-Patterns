@@ -13,10 +13,10 @@
             "state": {
               "type": "diagram-edit",
               "state": {
-                "file": "UnitOfWork.svg"
+                "file": "Strategy.svg"
               },
               "icon": "lucide-file",
-              "title": "UnitOfWork.svg"
+              "title": "Strategy.svg"
             }
           }
         ]
@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "036ca9caeab8bf4b",
@@ -185,8 +184,10 @@
   },
   "active": "d00671ffafb82bb9",
   "lastOpenFiles": [
-    "Untitled Diagram 1.svg",
     "UnitOfWork.svg",
+    "Strategy.svg",
+    "Sin título.md",
+    "Untitled Diagram 1.svg",
     "Singleton.svg",
     "Repository.svg",
     "Patrones de diseño.md",
