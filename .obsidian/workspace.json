@@ -13,10 +13,10 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "DocumentacionObsidian/Dependecy Injection.svg"
+                "file": "DocumentacionObsidian/Builder.svg"
               },
               "icon": "lucide-image",
-              "title": "Dependecy Injection"
+              "title": "Builder"
             }
           }
         ]
@@ -182,5 +182,25 @@
     }
   },
   "active": "b457945a27ca53fb",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "DocumentacionObsidian/Dependecy Injection.svg",
+    "DocumentacionObsidian/factoryPattern.svg",
+    "DocumentacionObsidian/Patrones de diseño.md",
+    "DocumentacionObsidian/Repository.svg",
+    "DocumentacionObsidian/Singleton.svg",
+    "DocumentacionObsidian/Strategy.svg",
+    "DocumentacionObsidian/UnitOfWork.svg",
+    "Bridge.md",
+    "DocumentacionObsidian/Builder.svg",
+    "Design Patterns/DesignPatters.Models/obj/Debug/net10.0/DesignPatters.Models.csproj.AssemblyReference.cache",
+    "Design Patterns/DesignPatters.Models/obj/Debug/net10.0/DesignPatters.Models.assets.cache",
+    "Design Patterns/DesingPatterns/obj/Debug/net10.0/DesingPatterns.csproj.AssemblyReference.cache",
+    "Design Patterns/DesignPatterns.Repository/obj/rider.project.restore.info",
+    "Design Patterns/DesignPatters.Models/obj/rider.project.restore.info",
+    "Design Patterns/DesignPatters.Models/obj/DesignPatters.Models.csproj.nuget.dgspec.json",
+    "Design Patterns/DesignPatters.Models/obj/project.nuget.cache",
+    "Design Patterns/DesignPatters.Models/obj/project.assets.json",
+    "Design Patterns/DesignPatters.Models/obj/DesignPatters.Models.csproj.nuget.g.targets",
+    "Design Patterns/DesignPatters.Models/obj/DesignPatters.Models.csproj.nuget.g.props"
+  ]
 }
